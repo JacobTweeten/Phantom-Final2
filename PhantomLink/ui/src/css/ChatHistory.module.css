@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&family=Orbitron:wght@400..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-image: url('../../public/pics/background.gif');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Lakki Reddy', cursive;
+}
+
+.layout {
+    min-height: 100vh;
+    background: transparent;
+}
+
+.header {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centers child elements horizontally */
+    align-items: center;     /* Centers child elements vertically */
+    font-family: 'Lakki Reddy', cursive;
+    height: 120px;
+    box-sizing: border-box;
+  }
+  
+
+  .menu {
+    background-color: #333;
+    font-family: "Helvetica", "Arial", sans-serif;
+    display: flex;
+    /*justify-content: center; /* Centers the menu items horizontally */
+    align-items: center;     
+    /*border: 2px solid #fff;  */
+    padding: 10px;
+  }
+
+
+@keyframes ghostGlow {
+  0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+  50% { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+  100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+}
+
+.logoText {
+  font-size: 3rem;
+  color: white;
+  font-family: 'Lakki Reddy', cursive;
+  animation: ghostGlow 3s infinite alternate; /* Floating glow effect */
+}
+
+/* Spooky, moving fog effect */
+@keyframes fogEffect {
+  0% { opacity: 0.3; transform: translateX(-10px); }
+  50% { opacity: 0.6; transform: translateX(10px); }
+  100% { opacity: 0.3; transform: translateX(-10px); }
+}
+
+
+  
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoImage {
+    height: 200px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .logoText {
+    color: white;
+    font-size: 3rem;
+    padding: 40px 20px 20px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Lakki Reddy', cursive;
+    height: 120px;
+    box-sizing: border-box;
+  }
+  
+  
+  .menu {
+    flex: 1;
+  }
+
+.content {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    width: 400px;
+}
+
+.title {
+    color: white;
+    text-align: center;
+}
+
+.form {
+    width: 100%;
+}
+
+.formItem {
+    color: white;
+}
+
+.inputField {
+    width: 100%;
+}
+
+.buttonWrapper {
+    text-align: center;
+}
+
+.registerButton {
+    width: 100%;
+    background-color: #d9534f;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.registerButton:hover {
+    background-color: #c9302c;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+
+.chatHistoryTitle {
+    color: white !important;
+    font-family: 'Lakki Reddy', cursive !important;
+    text-align: center;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+.convoCard {
+    background: rgba(0, 0, 0, 0.7) !important;
+    color: white !important;
+    font-family: "Helvetica", Arial, sans-serif !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    min-width: 280px;
+}
+.cardTitle {
+    color: white !important;
+    font-family: "Helvetica", Arial, sans-serif;
+  }
+  
+.cardTitleExpanded {
+    color: white;
+    font-family: "Helvetica", Arial, sans-serif;
+}
+.pageTitle {
+    color: white !important;
+    font-family: "Helvetica", Arial, sans-serif;
+}
+
+.chatLogExpanded {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Helvetica", Arial, sans-serif;
+}
+@media (max-width: 768px) {
+    .convoCard {
+      flex: 1 1 100%;
+      max-width: 100%;
+      min-width: unset;
+    }
+  
+    .cardContainer {
+      padding: 0 10px;
+    }
+  
+    .chatLogExpanded {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  }
+
+/* Ensure each card has a fixed width */
+.card {
+    flex: 1 1 calc(33.333% - 20px); /* 3 cards per row with spacing */
+    max-width: 30%; /* Limits width to avoid stretching */
+    background: rgba(0, 0, 0, 0.7) !important; /* Dark background */
+    color: white !important;
+    font-family: "Helvetica", Arial, sans-serif !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.cardExpanded p {
+    color: white !important;
+    font-family: "Helvetica", Arial, sans-serif !important;
+}
+
+/* Ensure text inside the cards is white */
+.card .ant-typography {
+    color: white !important;
+    font-family: "Helvetica", Arial, sans-serif !important;
+}
+
+/* Responsive Fix: Adjust for Smaller Screens */
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%; /* 1 card per row on mobile */
+        max-width: 90%;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    /*  Fix Background to Cover Entire Screen (No Tiling) */
+    body {
+      background-size: 100% 100%; /* Stretches image to cover full screen */
+      background-repeat: no-repeat; /* Prevents tiling */
+      background-attachment: fixed; /* Keeps background fixed */
+    }
+  
+    /*  Fix Header to be Full Width and Stay in a Row */
+    .header {
+      flex-direction: row; /* Keep elements in one row */
+      justify-content: space-between; /* Space out elements */
+      align-items: center;
+      height: 80px;
+      width: 100vw; /* Ensure full width */
+      padding: 10px 15px;
+      text-align: left;
+    }
+  
+    .logo {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+    }
+  
+    .logoImage {
+      height: 90px; /* Reduce size for mobile */
+      margin-right: 8px;
+    }
+  
+    .logoText {
+      font-size: 1.5rem; /* Reduce size to fit */
+      padding: 0;
+      white-space: nowrap; /* Prevents stacking */
+    }
+  
+    /*  Fix Menu on Mobile */
+    .menu {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end; /* Push to right */
+    }
+  
+    .menu .ant-menu-item {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    /*  Ensure Dropdown Menu Displays "Menu" */
+    .menu .ant-dropdown-trigger {
+      background-color: #444;
+      color: white !important;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: 1px solid white;
+    }
+  
+    .menu .ant-dropdown-trigger::after {
+      content: " Menu"; /* Adds "Menu" next to the icon */
+      padding-left: 5px;
+    }
+  
+    /*  Fix Title Text to Stay in One Line */
+    .titleText {
+      font-size: 1.6rem;
+      white-space: normal; /* allow wrapping */
+      text-overflow: initial;
+      overflow: visible;
+      text-align: center;
+      padding: 0 10px;
+    }
+  
+    /*  Fix Footer to Stretch Across Full Width */
+    .footer {
+      width: 100vw; /* Ensure full width */
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  
+    /*  Resize Buttons for Mobile */
+    .findGhostsButton,
+    .shareLocationButton {
+      font-size: 1rem;
+      width: 100%;
+      max-width: none;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    /*  Fix Content Spacing */
+    .content {
+      padding: 20px;
+    }
+  
+    .bodyText {
+      font-size: 1rem;
+      padding: 0 10px;
+      text-align: center;
+      word-break: break-word;
+    }
+  
+    /*  Make Info Container Fit Better */
+    .infoContainer {
+      width: 90%;
+      max-width: 350px;
+      padding: 20px;
+      margin: 30px auto;
+    }
+  
+    .infoParagraph {
+      font-size: 1rem;
+      text-align: justify;
+    }
+  
+    .authButtonWrapper {
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      z-index: 1000;
+    }
+    
+    .logoutButton,
+    .loginButton {
+      font-size: 0.8rem;
+      padding: 6px 30px;
+      white-space: nowrap;
+    }
+    
+  }
+  
+  
+  .dropdownTrigger {
+    background-color: #444 !important;
+    color: white !important;
+    border: 1px solid white;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    font-family: 'Lakki Reddy', cursive;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  

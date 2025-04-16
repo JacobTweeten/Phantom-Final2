@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&family=Orbitron:wght@400..900&display=swap');
+
+/* HomePage.module.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-image: url('../../public/pics/background.gif');
+  background-size: cover; /* Stretch to fill screen */
+  background-repeat: no-repeat; /* Prevent multiple images */
+  background-position: center center; /* Center background */
+}
+
+.layout {
+  background: none !important; /* Remove any extra backgrounds */
+}
+
+.titleText{
+  color: white !important;
+}
+
+.bodyText{
+  color: white;
+
+}
+
+.homepage {
+    text-align: center;
+  }
+  
+  
+  .header {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centers child elements horizontally */
+    align-items: center;     /* Centers child elements vertically */
+    font-family: 'Lakki Reddy', cursive;
+    height: 120px;
+    box-sizing: border-box;
+  }
+  
+
+  .menu {
+    background-color: #333;
+    font-family: "Helvetica", "Arial", sans-serif;
+    display: flex;
+    /*justify-content: center; /* Centers the menu items horizontally */
+    align-items: center;     
+    /*border: 2px solid #fff;  */
+    padding: 10px;
+  }
+
+
+@keyframes ghostGlow {
+  0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+  50% { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+  100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+}
+
+.logoText {
+  font-size: 3rem;
+  color: white;
+  font-family: 'Lakki Reddy', cursive;
+  animation: ghostGlow 3s infinite alternate; /* Floating glow effect */
+}
+
+/* Spooky, moving fog effect
+@keyframes fogEffect {
+  0% { opacity: 0.3; transform: translateX(-10px); }
+  50% { opacity: 0.6; transform: translateX(10px); }
+  100% { opacity: 0.3; transform: translateX(-10px); }
+}
+ */
+
+  
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoImage {
+    height: 200px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .logoText {
+    color: white;
+    font-size: 3rem;
+    padding: 40px 20px 20px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Lakki Reddy', cursive;
+    height: 120px;
+    box-sizing: border-box;
+  }
+  
+  
+  .menu {
+    flex: 1;
+  }
+  
+  .authButton {
+    margin-top: 16px;
+  }
+  
+  .logoutButton,
+  .loginButton {
+    margin-top: 16px;
+  }
+  
+  content {
+    padding: 50px;
+    text-align: center;
+    font-family: "Helvetica", "Arial", sans-serif;
+    color: white;
+  }
+  
+  .ant-typography, .ant-btn, .ant-menu {
+    font-family: 'Lakki Reddy', cursive !important;
+  }
+  
+  .ant-btn {
+    margin-top: 16px;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+
+
+  .findGhostsButton {
+    position: relative;
+    padding: 15px 30px 15px 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    color: white;
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.6); /* Glow effect */
+  }
+  
+  .findGhostsButton::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 20, 147, 0.4) 10%, transparent 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .findGhostsButton:hover::before {
+    opacity: 1;
+  }
+  
+  .findGhostsButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 20, 147, 0.9);
+  }
+  
+  .findGhostsButton:disabled {
+    background: #555;
+    color: #aaa;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  .shareLocationButton {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #9400d3, #8a2be2); /* Neon purple */
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 0 20px rgba(148, 0, 211, 0.6);
+  }
+  
+  .shareLocationButton::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.4) 10%, transparent 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .shareLocationButton:hover::before {
+    opacity: 1;
+  }
+  
+  .shareLocationButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(148, 0, 211, 0.9);
+  }
+  
+
+  .infoContainer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    width: 400px;
+    color: white;
+    max-width: 400px;
+    margin: 50px auto;
+    
+  }
+  .infoParagraph {
+    font-size: 1.2rem;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+@media screen and (max-width: 768px) {
+  /*  Fix Background to Cover Entire Screen (No Tiling) */
+  body {
+    background-size: 100% 100%; /* Stretches image to cover full screen */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps background fixed */
+  }
+
+  /*  Fix Header to be Full Width and Stay in a Row */
+  .header {
+    flex-direction: row; /* Keep elements in one row */
+    justify-content: space-between; /* Space out elements */
+    align-items: center;
+    height: 80px;
+    width: 100vw; /* Ensure full width */
+    padding: 10px 15px;
+    text-align: left;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .logoImage {
+    height: 90px; /* Reduce size for mobile */
+    margin-right: 8px;
+  }
+
+  .logoText {
+    font-size: 1.5rem; /* Reduce size to fit */
+    padding: 0;
+    white-space: nowrap; /* Prevents stacking */
+  }
+
+  /*  Fix Menu on Mobile */
+  .menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end; /* Push to right */
+  }
+
+  .menu .ant-menu-item {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  /*  Ensure Dropdown Menu Displays "Menu" */
+  .menu .ant-dropdown-trigger {
+    background-color: #444;
+    color: white !important;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+
+  .menu .ant-dropdown-trigger::after {
+    content: " Menu"; /* Adds "Menu" next to the icon */
+    padding-left: 5px;
+  }
+
+  /*  Fix Title Text to Stay in One Line */
+  .titleText {
+    font-size: 1.6rem;
+    white-space: normal; /* allow wrapping */
+    text-overflow: initial;
+    overflow: visible;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /*  Fix Footer to Stretch Across Full Width */
+  .footer {
+    width: 100vw; /* Ensure full width */
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  /*  Resize Buttons for Mobile */
+  .findGhostsButton,
+  .shareLocationButton {
+    font-size: 1rem;
+    width: 100%;
+    max-width: none;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  /*  Fix Content Spacing */
+  .content {
+    padding: 20px;
+  }
+
+  .bodyText {
+    font-size: 1rem;
+    padding: 0 10px;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  /*  Make Info Container Fit Better */
+  .infoContainer {
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+    margin: 30px auto;
+  }
+
+  .infoParagraph {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .authButtonWrapper {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 1000;
+  }
+  
+  .logoutButton,
+  .loginButton {
+    font-size: 0.8rem;
+    padding: 10px 30px;
+    white-space: nowrap;
+  }
+  
+}
+
+
+.dropdownTrigger {
+  background-color: #444 !important;
+  color: white !important;
+  border: 1px solid white;
+  padding: 6px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-family: 'Lakki Reddy', cursive;
+  cursor: pointer;
+  margin-left: auto;
+}

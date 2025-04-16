@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&family=Orbitron:wght@400..900&display=swap');
+
+
+.titleText {
+  color: white !important;
+}
+
+.bodyText {
+  color: white;
+}
+
+.homepage {
+  text-align: center;
+}
+
+.layout {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.header {
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 200px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.logoText {
+  font-size: 3rem;
+  color: white;
+  font-family: 'Lakki Reddy', cursive;
+}
+
+
+.chatContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: calc(100vh - 200px); /* Adjust content height to fit screen */
+  padding: 20px;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Slight dark background */
+}
+
+.messageList {
+  max-height: 70vh; /* Ensure the messages list doesn't overflow */
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+
+
+
+.sendButton {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.sendButton:disabled {
+  background-color: #ccc;
+}
+
+.endButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.endButton button {
+  background-color: #d9534f; /* Bootstrap danger red */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.endButton button:hover {
+  background-color: #c9302c; /* Slightly darker red on hover */
+  transform: scale(1.05); /* Slight pop effect */
+}
+
+.endButton button:active {
+  background-color: #ac2925; /* Even darker red when clicked */
+  transform: scale(0.98);
+}
+
+
+.ghostMessage {
+  position: absolute;
+  top: 50%; /* Vertically center the message */
+  left: 50%; /* Horizontally center the message */
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+  border-radius: 10px;
+  color: white;
+  max-width: 80%;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.userMessageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the user's message */
+  margin-bottom: 20px;
+}
+
+
+.userMessage {
+  background-color: #333;
+  color: white;  /* Make the text white */
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin-bottom: 5px;
+}
+
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+
+.ghostContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Centered ghost */
+}
+
+.ghostGif {
+  width: 700px; /* Increased size */
+  height: auto;
+  max-width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.ghostMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 80%;
+  font-size: 1.2rem;
+}
+
+.inputContainer {
+  display: flex;
+  /*justify-content: space-between;*/
+  align-items: center;
+  /*padding: 10px;*/
+  background-color: rgba(0, 0, 0, 0.7); /* Slight background color for input */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+.inputField {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+
+
+
+
+.ghostStatus {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 130px; /* Smaller size */
+  height: 130px;
+  background: radial-gradient(circle, #8865b9 10%, #1d55b8 80%);
+  border: 5px solid #b865ad;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.ghostStatus span {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b865ad;
+  text-shadow: 0 0 10px #8865b9, 
+               0 0 20px #1d55b8;
+}
+
+
+
+
+
+.inputContainer .sendButton {
+  margin-top: 10px;
+  position: relative;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+
+  color: white;
+  background: linear-gradient(45deg, #ff69b4, #ff1493);
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 20px rgba(255, 20, 147, 0.6); /* Glow effect */
+}
+  
+.inputContainer .sendButton::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 20, 147, 0.4) 10%, transparent 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.inputContainer .sendButton:hover::before {
+  opacity: 1;
+}
+
+.inputContainer .sendButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 20, 147, 0.9);
+}
+
+
+
+
+
+
+
+/* User Message Display */
+.userMessageDisplay {
+  position: relative;
+  bottom: 10px; /* Adjusts position to be directly above input bar */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* Fade-out effect */
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Input Container */
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+/* Input Field */
+.inputField {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .ghostStatus {
+    top: 20%;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    transform: none; 
+    border: 3px solid #b865ad;
+  }
+
+  .ghostStatus span {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .ghostGif {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .ghostMessage {
+    font-size: 1rem;
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .inputContainer {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .inputField {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .sendButton {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+
+  .chatContent {
+    padding: 10px;
+  }
+
+  .userMessageDisplay {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    max-width: 90%;
+  }
+
+  .endButton button {
+    font-size: 1rem;
+    padding: 10px 15px;
+    width: 90%;
+  }
+}
+
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .ghostMessage, .ghostStatus {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+

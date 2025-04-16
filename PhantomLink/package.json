@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@react-spring/parallax": "^9.7.5",
+    "react-parallax": "^3.5.1",
+    "react-speech-kit": "^3.0.1",
+    "react-speech-recognition": "^3.10.0",
+    "react-typed": "^2.0.12",
+    "react-typist": "^2.0.5"
+  }
+}

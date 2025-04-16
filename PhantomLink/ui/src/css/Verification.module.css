@@ -1,0 +1,42 @@
+/* Verification.module.css */
+.container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+  width: 400px;
+  color: white;
+  max-width: 400px;
+  margin: 50px auto;
+  
+}
+  
+  .header {
+    font-size: 1.5rem;
+  }
+  
+  .formItem label{
+    margin-bottom: 20px;
+    color: white !important;
+    font-family: helvetica !important;
+  }
+  
+  .buttonWrapper {
+    width: 100%;
+  }
+  
+  .customButton {
+    width: 100%;
+    background-color: #7ab865 !important; /* Ensures override of default styles */
+    border: none !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    color: white !important; /* Ensure text is visible */
+    transition: background-color 0.3s ease-in-out;
+    padding: 10px;
+  }
+  
+  .customButton:hover {
+    background-color: #689e54 !important; /* Slightly darker green on hover */
+  }
+  

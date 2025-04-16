@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&family=Orbitron:wght@400..900&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #b865ad, white);
+}
+
+.hintBox {
+  background-color: #b8211d;
+  text-align: center;
+  font-family: 'Lakki Reddy', cursive;
+
+  position: relative;
+  padding: 15px 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white !important;
+  background: linear-gradient(45deg, #b8211d, #180404); /* Neon purple */
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 60px #af615e;
+}
+
+.hint {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Lakki Reddy', cursive;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px 15px;
+}
+.buttonContainer {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.loadingWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.loadingGif {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  /*object-fit: contain;*/
+  margin: 0;
+  padding: 0;
+}
+
+.searchText {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-image: url('../../public/pics/background.gif');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.textButton {
+  position: relative;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+
+  color: white;
+  background: linear-gradient(45deg, #ff69b4, #ff1493);
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 20px rgba(255, 20, 147, 0.6); /* Glow effect */
+}
+  
+  .textButton::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 20, 147, 0.4) 10%, transparent 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.textButton:hover::before {
+  opacity: 1;
+}
+
+.textButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 20, 147, 0.9);
+}
+
+
+.speechButton {
+  position: relative;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #9400d3, #8a2be2); /* Neon purple */
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 20px rgba(148, 0, 211, 0.6);
+}
+
+
+.speechButton::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.4) 10%, transparent 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.speechButton:hover::before {
+  opacity: 1;
+}
+
+.speechButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(148, 0, 211, 0.9);
+}

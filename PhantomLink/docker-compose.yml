@@ -1,0 +1,55 @@
+version: "3.8"
+
+services:
+  frontend:
+    container_name: phantom-link-ui
+    build:
+      context: ./ui
+    depends_on:
+      - backend
+    restart: always
+
+  backend:
+    container_name: phantom-link-backend
+    build:
+      context: ./backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    command: ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "server:app"]
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    container_name: phantom-link-db
+    build:
+      context: ./db
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    expose:
+      - "5432"
+
+  nginx:
+    image: nginx:latest
+    container_name: phantom-link-nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./ui/build:/usr/share/nginx/html:ro
+      - /etc/letsencrypt/live/phantom-link.com:/etc/letsencrypt/live/phantom-link.com:ro
+      - /etc/letsencrypt/archive/phantom-link.com:/etc/letsencrypt/archive/phantom-link.com:ro
+      - /etc/letsencrypt/privkey.pem:/etc/letsencrypt/privkey.pem:ro
+    ports:
+      - "8080:80"
+      - "443:443"
+    depends_on:
+      - frontend
+      - backend
+    restart: always
+
+volumes:
+  postgres-data:
